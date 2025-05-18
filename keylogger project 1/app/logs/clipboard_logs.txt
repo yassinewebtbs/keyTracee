@@ -1,0 +1,1407 @@
+2025-05-15 17:29:33 - python backend/app.py
+
+2025-05-15 17:29:41 - python -m venv venv
+source venv/Scripts/activate  # Windows
+pip install flask
+
+2025-05-15 17:33:56 - Microsoft Windows [Version 10.0.26100.3775]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\yesmi>python -m venv venv
+
+C:\Users\yesmi>source venv/Scripts/activate  # Windows
+'source' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\yesmi>pip install flask
+Collecting flask
+  Downloading flask-3.1.1-py3-none-any.whl.metadata (3.0 kB)
+Collecting blinker>=1.9.0 (from flask)
+  Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+Collecting click>=8.1.3 (from flask)
+  Downloading click-8.2.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting itsdangerous>=2.2.0 (from flask)
+  Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting jinja2>=3.1.2 (from flask)
+  Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting markupsafe>=2.1.1 (from flask)
+  Downloading MarkupSafe-3.0.2-cp311-cp311-win_amd64.whl.metadata (4.1 kB)
+Collecting werkzeug>=3.1.0 (from flask)
+  Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+Collecting colorama (from click>=8.1.3->flask)
+  Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Downloading flask-3.1.1-py3-none-any.whl (103 kB)
+Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+Downloading click-8.2.0-py3-none-any.whl (102 kB)
+Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading MarkupSafe-3.0.2-cp311-cp311-win_amd64.whl (15 kB)
+Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Installing collected packages: markupsafe, itsdangerous, colorama, blinker, werkzeug, jinja2, click, flask
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━ 7/8 [flask]  WARNING: The script flask.exe is installed in 'C:\Users\yesmi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed blinker-1.9.0 click-8.2.0 colorama-0.4.6 flask-3.1.1 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.2 werkzeug-3.1.3
+
+2025-05-15 17:34:29 - <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Keylogger Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="hero">
+        <header>
+            <h1>Keylogger Control Panel</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2>Monitor & Analyze Employee Activity</h2>
+                <p>Real-time keylogging stats and security alerts at your fingertips.</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <main>
+        <section class="employee-logs">
+            <h2>Employee Logger Info</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Employee Name</th>
+                        <th>Total Words Typed</th>
+                        <th>Suspicious Words Detected</th>
+                        <th>Last Active</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>12,500</td>
+                        <td>5</td>
+                        <td>2025-05-10 14:30</td>
+                    </tr>
+                    <tr>
+                        <td>Jane Smith</td>
+                        <td>9,300</td>
+                        <td>0</td>
+                        <td>2025-05-10 13:45</td>
+                    </tr>
+                    <tr>
+                        <td>Emily Johnson</td>
+                        <td>15,600</td>
+                        <td>2</td>
+                        <td>2025-05-10 15:10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+</body>
+</html>
+
+2025-05-15 17:37:46 - 
+2025-05-15 17:38:02 - from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+if __name__ == "__main__":
+    app.run(debug=True)
+2025-05-16 12:42:43 - PS C:\Users\yesmi\Desktop\keylogger project> & C:/Users/yesmi/AppData/Local/Microsoft/WindowsApps/python3.11.exe "c:/Users/yesmi/Desktop/keylogger project/security.py"
+Error loading model: [Errno 2] No such file or directory: 'c:\\Users\\yesmi\\Desktop\\keylogger project\\suspicious_classifier.pkl'
+Looking for model at: c:\Users\yesmi\Desktop\keylogger project\suspicious_classifier.pkl
+Please make sure to run improved_nlp_model.py first to create the model file.
+Traceback (most recent call last):
+  File "c:\Users\yesmi\Desktop\keylogger project\security.py", line 12, in <module>
+    from detection import check_sentence, log_alert, explain_detection
+  File "c:\Users\yesmi\Desktop\keylogger project\detection.py", line 14, in <module>
+    model = joblib.load(model_path)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yesmi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\joblib\numpy_pickle.py", line 735, in load
+    with open(filename, "rb") as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'c:\\Users\\yesmi\\Desktop\\keylogger project\\suspicious_classifier.pkl'
+PS C:\Users\yesmi\Desktop\keylogger project> & C:/Users/yesmi/AppData/Local/Microsoft/WindowsApps/python3.11.exe "c:/Users/yesmi/Desktop/keylogger project/security.py"
+Error loading model: [Errno 2] No such file or directory: 'c:\\Users\\yesmi\\Desktop\\keylogger project\\suspicious_classifier.pkl'
+Looking for model at: c:\Users\yesmi\Desktop\keylogger project\suspicious_classifier.pkl
+Please make sure to run improved_nlp_model.py first to create the model file.
+Traceback (most recent call last):
+  File "c:\Users\yesmi\Desktop\keylogger project\security.py", line 12, in <module>
+    from detection import check_sentence, log_alert, explain_detection
+  File "c:\Users\yesmi\Desktop\keylogger project\detection.py", line 14, in <module>
+    model = joblib.load(model_path)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yesmi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\joblib\numpy_pickle.py", line 735, in load
+    with open(filename, "rb") as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'c:\\Users\\yesmi\\Desktop\\keylogger project\\suspicious_classifier.pkl'
+PS C:\Users\yesmi\Desktop\keylogger project> & C:/Users/yesmi/AppData/Local/Microsoft/WindowsApps/python3.11.exe "c:/Users/yesmi/Desktop/keylogger project/detection.py"
+Error loading model: [Errno 2] No such file or directory: 'c:\\Users\\yesmi\\Desktop\\keylogger project\\suspicious_classifier.pkl'
+Looking for model at: c:\Users\yesmi\Desktop\keylogger project\suspicious_classifier.pkl
+Please make sure to run improved_nlp_model.py first to create the model file.
+Traceback (most recent call last):
+  File "c:\Users\yesmi\Desktop\keylogger project\detection.py", line 14, in <module>
+    model = joblib.load(model_path)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yesmi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\joblib\numpy_pickle.py", line 735, in load
+    with open(filename, "rb") as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'c:\\Users\\yesmi\\Desktop\\keylogger project\\suspicious_classifier.pkl'
+PS C:\Users\yesmi\Desktop\keylogger project> & C:/Users/yesmi/AppData/Local/Microsoft/WindowsApps/python3.11.exe "c:/Users/yesmi/Desktop/keylogger project/detection.py"
+Error loading model: [Errno 2] No such file or directory: 'c:\\Users\\yesmi\\Desktop\\keylogger project\\suspicious_classifier.pkl'
+Looking for model at: c:\Users\yesmi\Desktop\keylogger project\suspicious_classifier.pkl
+Please make sure to run improved_nlp_model.py first to create the model file.
+Traceback (most recent call last):
+  File "c:\Users\yesmi\Desktop\keylogger project\detection.py", line 14, in <module>
+    model = joblib.load(model_path)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yesmi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\joblib\numpy_pickle.py", line 735, in load
+    with open(filename, "rb") as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'c:\\Users\\yesmi\\Desktop\\keylogger project\\suspicious_classifier.pkl'
+PS C:\Users\yesmi\Desktop\keylogger project> 
+2025-05-16 12:49:47 - Suspicious activity detected: 'password: 123456' (confidence: 85.5%)
+'Password: 123456' -> SUSPICIOUS
+This text was flagged because it contains concerning terms:
+- 'password' (importance: 1.0000)
+
+
+Suspicious activity detected: 'username and password for the system' (confidence: 98.9%)
+'username and password for the system' -> SUSPICIOUS
+This text was flagged because it contains concerning terms:
+- 'and password' (importance: 0.3276)
+- 'password for' (importance: 0.3276)
+- 'password for the' (importance: 0.3276)
+- 'username' (importance: 0.3276)
+- 'username and' (importance: 0.3276)
+
+
+Suspicious activity detected: 'accessing sensitive files' (confidence: 95.5%)
+'accessing sensitive files' -> SUSPICIOUS
+This text was flagged because it contains concerning terms:
+- 'sensitive files' (importance: 0.6157)
+- 'sensitive' (importance: 0.5724)
+- 'files' (importance: 0.5416)
+
+
+PS C:\Users\yesmi\Desktop\keylogger project> & C:/Users/yesmi/AppData/Local/Microsoft/WindowsApps/python3.11.exe "c:/Users/yesmi/Desktop/keylogger project/detection.py"
+Model loaded successfully from c:\Users\yesmi\Desktop\keylogger project\suspicious_classifier.pkl
+Testing detection module:
+'I went to school today' -> NORMAL
+
+Suspicious activity detected: 'my password is admin123' (confidence: 90.4%)
+'My password is admin123' -> SUSPICIOUS
+This text was flagged because it contains concerning terms:
+- 'password is' (importance: 0.5789)
+- 'my password' (importance: 0.5092)
+- 'password' (importance: 0.4076)
+- 'is' (importance: 0.3581)
+- 'my' (importance: 0.3335)
+
+
+Suspicious activity detected: 'let's bypass the security system' (confidence: 99.2%)
+'Let's bypass the security system' -> SUSPICIOUS
+This text was flagged because it contains concerning terms:
+- 'let bypass' (importance: 0.4457)
+- 'let bypass the' (importance: 0.4457)
+- 'bypass the' (importance: 0.3749)
+- 'security' (importance: 0.3749)
+- 'bypass' (importance: 0.3608)
+
+
+'Can you help me with this report?' -> NORMAL
+
+Suspicious activity detected: 'i'm sending my bank account details' (confidence: 98.8%)
+'I'm sending my bank account details' -> SUSPICIOUS
+This text was flagged because it contains concerning terms:
+- 'account details' (importance: 0.4083)
+- 'bank account details' (importance: 0.4083)
+- 'my bank' (importance: 0.4083)
+- 'bank account' (importance: 0.3795)
+- 'details' (importance: 0.3433)
+
+
+Suspicious activity detected: 'password: 123456' (confidence: 85.5%)
+'Password: 123456' -> SUSPICIOUS
+This text was flagged because it contains concerning terms:
+- 'password' (importance: 1.0000)
+
+
+Suspicious activity detected: 'username and password for the system' (confidence: 98.9%)
+'username and password for the system' -> SUSPICIOUS
+This text was flagged because it contains concerning terms:
+- 'and password' (importance: 0.3276)
+- 'password for' (importance: 0.3276)
+- 'password for the' (importance: 0.3276)
+- 'username' (importance: 0.3276)
+- 'username and' (importance: 0.3276)
+
+
+Suspicious activity detected: 'accessing sensitive files' (confidence: 95.5%)
+'accessing sensitive files' -> SUSPICIOUS
+This text was flagged because it contains concerning terms:
+- 'sensitive files' (importance: 0.6157)
+- 'sensitive' (importance: 0.5724)
+- 'files' (importance: 0.5416)
+
+
+PS C:\Users\yesmi\Desktop\keylogger project> & C:/Users/yesmi/AppData/Local/Microsoft/WindowsApps/python3.11.exe "c:/Users/yesmi/Desktop/keylogger project/detection.py"
+Model loaded successfully from c:\Users\yesmi\Desktop\keylogger project\suspicious_classifier.pkl
+Testing detection module:
+'I went to school today' -> NORMAL
+
+Suspicious activity detected: 'my password is admin123' (confidence: 90.4%)
+'My password is admin123' -> SUSPICIOUS
+This text was flagged because it contains concerning terms:
+- 'password is' (importance: 0.5789)
+- 'my password' (importance: 0.5092)
+- 'password' (importance: 0.4076)
+- 'is' (importance: 0.3581)
+- 'my' (importance: 0.3335)
+
+
+Suspicious activity detected: 'let's bypass the security system' (confidence: 99.2%)
+'Let's bypass the security system' -> SUSPICIOUS
+This text was flagged because it contains concerning terms:
+- 'let bypass' (importance: 0.4457)
+- 'let bypass the' (importance: 0.4457)
+- 'bypass the' (importance: 0.3749)
+- 'security' (importance: 0.3749)
+- 'bypass' (importance: 0.3608)
+
+
+'Can you help me with this report?' -> NORMAL
+
+Suspicious activity detected: 'i'm sending my bank account details' (confidence: 98.8%)
+'I'm sending my bank account details' -> SUSPICIOUS
+This text was flagged because it contains concerning terms:
+- 'account details' (importance: 0.4083)
+- 'bank account details' (importance: 0.4083)
+- 'my bank' (importance: 0.4083)
+- 'bank account' (importance: 0.3795)
+- 'details' (importance: 0.3433)
+
+
+Suspicious activity detected: 'password: 123456' (confidence: 85.5%)
+'Password: 123456' -> SUSPICIOUS
+This text was flagged because it contains concerning terms:
+- 'password' (importance: 1.0000)
+
+
+Suspicious activity detected: 'username and password for the system' (confidence: 98.9%)
+'username and password for the system' -> SUSPICIOUS
+This text was flagged because it contains concerning terms:
+- 'and password' (importance: 0.3276)
+- 'password for' (importance: 0.3276)
+- 'password for the' (importance: 0.3276)
+- 'username' (importance: 0.3276)
+- 'username and' (importance: 0.3276)
+
+
+Suspicious activity detected: 'accessing sensitive files' (confidence: 95.5%)
+'accessing sensitive files' -> SUSPICIOUS
+This text was flagged because it contains concerning terms:
+- 'sensitive files' (importance: 0.6157)
+- 'sensitive' (importance: 0.5724)
+- 'files' (importance: 0.5416)
+
+
+PS C:\Users\yesmi\Desktop\keylogger project> & C:/Users/yesmi/AppData/Local/Microsoft/WindowsApps/python3.11.exe "c:/Users/yesmi/Desktop/keylogger project/detection.py"
+Model loaded successfully from c:\Users\yesmi\Desktop\keylogger project\suspicious_classifier.pkl
+Testing detection module:
+'I went to school today' -> NORMAL
+
+Suspicious activity detected: 'my password is admin123' (confidence: 90.4%)
+'My password is admin123' -> SUSPICIOUS
+This text was flagged because it contains concerning terms:
+- 'password is' (importance: 0.5789)
+- 'my password' (importance: 0.5092)
+- 'password' (importance: 0.4076)
+- 'is' (importance: 0.3581)
+- 'my' (importance: 0.3335)
+
+
+Suspicious activity detected: 'let's bypass the security system' (confidence: 99.2%)
+'Let's bypass the security system' -> SUSPICIOUS
+This text was flagged because it contains concerning terms:
+- 'let bypass' (importance: 0.4457)
+- 'let bypass the' (importance: 0.4457)
+- 'bypass the' (importance: 0.3749)
+- 'security' (importance: 0.3749)
+- 'bypass' (importance: 0.3608)
+
+
+'Can you help me with this report?' -> NORMAL
+
+Suspicious activity detected: 'i'm sending my bank account details' (confidence: 98.8%)
+'I'm sending my bank account details' -> SUSPICIOUS
+This text was flagged because it contains concerning terms:
+- 'account details' (importance: 0.4083)
+- 'bank account details' (importance: 0.4083)
+- 'my bank' (importance: 0.4083)
+- 'bank account' (importance: 0.3795)
+- 'details' (importance: 0.3433)
+
+
+Suspicious activity detected: 'password: 123456' (confidence: 85.5%)
+'Password: 123456' -> SUSPICIOUS
+This text was flagged because it contains concerning terms:
+- 'password' (importance: 1.0000)
+
+
+Suspicious activity detected: 'username and password for the system' (confidence: 98.9%)
+'username and password for the system' -> SUSPICIOUS
+This text was flagged because it contains concerning terms:
+- 'and password' (importance: 0.3276)
+- 'password for' (importance: 0.3276)
+- 'password for the' (importance: 0.3276)
+- 'username' (importance: 0.3276)
+- 'username and' (importance: 0.3276)
+
+
+Suspicious activity detected: 'accessing sensitive files' (confidence: 95.5%)
+'accessing sensitive files' -> SUSPICIOUS
+This text was flagged because it contains concerning terms:
+- 'sensitive files' (importance: 0.6157)
+- 'sensitive' (importance: 0.5724)
+- 'files' (importance: 0.5416)
+
+
+PS C:\Users\yesmi\Desktop\keylogger project> & C:/Users/yesmi/AppData/Local/Microsoft/WindowsApps/python3.11.exe "c:/Users/yesmi/Desktop/keylogger project/security.py"
+Model loaded successfully from c:\Users\yesmi\Desktop\keylogger project\suspicious_classifier.pkl
+Testing detection system...
+Suspicious activity detected: 'my password is admin123' (confidence: 90.4%)
+Detection test passed for: 'My password is admin123'
+Suspicious activity detected: 'let's bypass the security system' (confidence: 99.2%)
+Detection test passed for: 'Let's bypass the security system'
+----------------------------------------
+Advanced Security Monitoring Started
+Monitoring keystrokes and clipboard...
+Press Esc to stop.
+----------------------------------------
+Suspicious activity detected: 'i want to rob a bank' (confidence: 62.3%)
+Alert logged: i want to rob a bank (confidence: 62.3%)
+ALERT: Suspicious activity detected!
+TEXT: i want to rob a bank
+REASON: This text was flagged because it contains concerning terms:
+- 'bank' (importance: 0.8893)
+- 'to' (importance: 0.4574)
+
+Screenshot saved: c:\Users\yesmi\Desktop\keylogger project\screens\screenshot_20250516_124254.png
+Suspicious activity detected: 'let s hack' (confidence: 72.7%)
+Alert logged: let s hack (confidence: 72.7%)
+ALERT: Suspicious activity detected!
+TEXT: let s hack
+REASON: This text was flagged because it contains concerning terms:
+- 'hack' (importance: 0.8933)
+- 'let' (importance: 0.4496)
+
+Screenshot saved: c:\Users\yesmi\Desktop\keylogger project\screens\screenshot_20250516_124732.png
+Suspicious activity detected: 'let s hack the' (confidence: 70.1%)
+Alert logged: let s hack the (confidence: 70.1%)
+ALERT: Suspicious activity detected!
+TEXT: let s hack the
+REASON: This text was flagged because it contains concerning terms:
+- 'hack' (importance: 0.8603)
+- 'let' (importance: 0.4330)
+- 'the' (importance: 0.2690)
+
+Screenshot saved: c:\Users\yesmi\Desktop\keylogger project\screens\screenshot_20250516_124733.png
+Suspicious activity detected: 'let s hack the system' (confidence: 92.4%)
+Alert logged: let s hack the system (confidence: 92.4%)
+ALERT: Suspicious activity detected!
+TEXT: let s hack the system
+REASON: This text was flagged because it contains concerning terms:
+- 'hack' (importance: 0.6119)
+- 'the system' (importance: 0.5146)
+- 'system' (importance: 0.4789)
+- 'let' (importance: 0.3080)
+- 'the' (importance: 0.1913)
+
+Screenshot saved: c:\Users\yesmi\Desktop\keylogger project\screens\screenshot_20250516_124735.png
+Suspicious activity detected: 'they hack' (confidence: 76.6%)
+Alert logged: they hack (confidence: 76.6%)
+ALERT: Suspicious activity detected!
+TEXT: they hack
+REASON: This text was flagged because it contains concerning terms:
+- 'hack' (importance: 1.0000)
+
+Screenshot saved: c:\Users\yesmi\Desktop\keylogger project\screens\screenshot_20250516_124804.png
+Suspicious activity detected: 'they hack me' (confidence: 71.5%)
+Alert logged: they hack me (confidence: 71.5%)
+ALERT: Suspicious activity detected!
+TEXT: they hack me
+REASON: This text was flagged because it contains concerning terms:
+- 'hack' (importance: 0.8504)
+- 'me' (importance: 0.5261)
+
+Screenshot saved: c:\Users\yesmi\Desktop\keylogger project\screens\screenshot_20250516_124805.png
+Suspicious activity detected: 'they hack me hackedpassword' (confidence: 71.5%)
+Alert logged: they hack me hackedpassword (confidence: 71.5%)
+ALERT: Suspicious activity detected!
+TEXT: they hack me hackedpassword
+REASON: This text was flagged because it contains concerning terms:
+- 'hack' (importance: 0.8504)
+- 'me' (importance: 0.5261)
+
+Screenshot saved: c:\Users\yesmi\Desktop\keylogger project\screens\screenshot_20250516_124819.png
+Suspicious activity detected: 'they hack me hackedpassword is' (confidence: 70.2%)
+Alert logged: they hack me hackedpassword is (confidence: 70.2%)
+ALERT: Suspicious activity detected!
+TEXT: they hack me hackedpassword is
+REASON: This text was flagged because it contains concerning terms:
+- 'hack' (importance: 0.7526)
+2025-05-16 12:53:22 - def on_press(key):
+    global current_sentence, last_checked_text, buffer_timeout
+
+    try:
+        # Handle character keys
+        if hasattr(key, 'char') and key.char is not None:
+            current_sentence.append(key.char)
+
+        elif key == Key.space:
+            current_sentence.append(' ')
+
+        elif key == Key.enter:
+            sentence = ''.join(current_sentence).strip()
+            check_suspicious_text(sentence)
+
+            with open(LOG_FILE, "a", encoding="utf-8") as f:
+                f.write("[ENTER]\n")
+
+            current_sentence = []
+
+        elif key == Key.backspace:
+            if current_sentence:
+                current_sentence.pop()
+
+        elif key == Key.tab:
+            current_sentence.append('\t')
+
+        elif key == Key.esc:
+            print("Keylogger stopped by user.")
+            return False
+
+        # Log keypress (for monitoring only, doesn't trigger detection)
+        log_keypress(''.join(current_sentence))
+
+    except Exception as e:
+        print(f"Error in keylogger: {e}")
+
+2025-05-16 12:54:16 - def on_press(key):
+    global current_sentence, last_checked_text, buffer_timeout
+
+    try:
+        # Handle character keys
+        if hasattr(key, 'char') and key.char is not None:
+            current_sentence.append(key.char)
+
+        elif key == Key.space:
+            current_sentence.append(' ')
+
+        elif key == Key.enter:
+            sentence = ''.join(current_sentence).strip()
+            check_suspicious_text(sentence)
+
+            with open(LOG_FILE, "a", encoding="utf-8") as f:
+                f.write("[ENTER]\n")
+
+            current_sentence = []
+
+        elif key == Key.backspace:
+            if current_sentence:
+                current_sentence.pop()
+
+        elif key == Key.tab:
+            current_sentence.append('\t')
+
+        elif key == Key.esc:
+            print("Keylogger stopped by user.")
+            return False
+
+        # Log keypress (for monitoring only, doesn't trigger detection)
+        log_keypress(''.join(current_sentence))
+
+    except Exception as e:
+        print(f"Error in keylogger: {e}")
+
+2025-05-16 13:03:43 -     ("change my password","normal")
+
+2025-05-16 13:07:22 - custom_stopwords = set([
+    "my", "your", "the", "it", "and", "or", "to", "of", "a", "an", "is", "in", "on", "at", "for",
+    "from", "with", "by", "i", "you", "he", "she", "we", "they", "me", "him", "her", "us", "them"
+])
+
+2025-05-16 13:10:47 - df = pd.DataFrame(training_data, columns=['text', 'label'])
+
+# Class distribution check
+print("Class distribution:")
+print(df['label'].value_counts())
+print()
+
+# Features and labels
+X = df['text']
+y = df['label']
+
+# Train/test split
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42, stratify=y
+)
+
+# Text classification pipeline
+pipeline = Pipeline([
+    ('tfidf', TfidfVectorizer(
+        ngram_range=(1, 3),
+        max_features=8000,
+        min_df=1,
+        max_df=0.9,
+        sublinear_tf=True
+    )),
+    ('classifier', MultinomialNB(alpha=0.1))
+])
+
+# Train the model
+pipeline.fit(X_train, y_train)
+
+# Evaluate the model
+y_pred = pipeline.predict(X_test)
+print("Classification Report:")
+print(classification_report(y_test, y_pred))
+
+# Confusion matrix
+cm = confusion_matrix(y_test, y_pred)
+print("Confusion Matrix:")
+print(cm)
+
+# Save the trained model
+script_dir = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(script_dir, "suspicious_classifier.pkl")
+joblib.dump(pipeline, model_path)
+print(f"Model saved to {model_path}")
+
+# Plot confusion matrix
+plt.figure(figsize=(8, 6))
+sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
+            xticklabels=['normal', 'suspicious'],
+            yticklabels=['normal', 'suspicious'])
+plt.xlabel('Predicted')
+plt.ylabel('Actual')
+plt.title('Confusion Matrix')
+plt.savefig('confusion_matrix.png')
+plt.close()
+
+2025-05-16 13:11:32 - # Define custom stopwords to ignore common/generic words
+custom_stopwords = set([
+    "my", "your", "the", "it", "and", "or", "to", "of", "a", "an", "is", "in", "on", "at", "for",
+    "from", "with", "by", "i", "you", "he", "she", "we", "they", "me", "him", "her", "us", "them",
+    "this", "that", "these", "those", "be", "are", "was", "were", "am", "will", "do", "does", "did"
+])
+
+# Convert to DataFrame for easier manipulation
+df = pd.DataFrame(training_data, columns=['text', 'label'])
+
+# Show class balance
+print("Class distribution:")
+print(df['label'].value_counts())
+print()
+
+# Split data into features and target
+X = df['text']
+y = df['label']
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
+
+# Define the pipeline with TF-IDF and Naive Bayes
+pipeline = Pipeline([
+    ('tfidf', TfidfVectorizer(
+        ngram_range=(1, 3),
+        max_features=8000,
+        min_df=1,
+        max_df=0.9,
+        stop_words=custom_stopwords,
+        sublinear_tf=True
+    )),
+    ('classifier', MultinomialNB(alpha=0.1))
+])
+
+# Train the model
+pipeline.fit(X_train, y_train)
+
+# Evaluate on the test set
+y_pred = pipeline.predict(X_test)
+print("Model Evaluation:")
+print(classification_report(y_test, y_pred))
+
+# Confusion matrix
+cm = confusion_matrix(y_test, y_pred)
+print("Confusion Matrix:")
+print(cm)
+
+# Save the trained model
+script_dir = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(script_dir, "suspicious_classifier.pkl")
+joblib.dump(pipeline, model_path)
+print(f"\nModel trained and saved as {model_path}")
+
+# Save confusion matrix as heatmap
+plt.figure(figsize=(8, 6))
+sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
+            xticklabels=['normal', 'suspicious'],
+            yticklabels=['normal', 'suspicious'])
+plt.xlabel('Predicted')
+plt.ylabel('Actual')
+plt.title('Confusion Matrix')
+plt.savefig('confusion_matrix.png')
+plt.close()
+2025-05-16 13:15:03 - # Define custom stopwords
+custom_stopwords = set([
+    "my", "your", "the", "it", "and", "or", "to", "of", "a", "an", "is", "in", "on", "at", "for",
+    "from", "with", "by", "i", "you", "he", "she", "we", "they", "me", "him", "her", "us", "them",
+    "this", "that", "these", "those", "be", "are", "was", "were", "am", "will", "do", "does", "did"
+])
+
+# Define the pipeline with fixed stopwords
+pipeline = Pipeline([
+    ('tfidf', TfidfVectorizer(
+        ngram_range=(1, 3),
+        max_features=8000,
+        min_df=1,
+        max_df=0.9,
+        stop_words=list(custom_stopwords),  # <- FIXED HERE
+        sublinear_tf=True
+    )),
+    ('classifier', MultinomialNB(alpha=0.1))
+])
+2025-05-16 13:20:18 - 
+2025-05-16 17:20:21 - Traceback (most recent call last):
+  File "c:\Users\yesmi\Desktop\keylogger project\nlp-model.py", line 406, in <module>
+    pipeline.fit(X_train, y_train)
+  File "C:\Users\yesmi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yesmi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\pipeline.py", line 654, in fit
+    Xt = self._fit(X, y, routed_params, raw_params=params)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yesmi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\pipeline.py", line 588, in _fit
+    X, fitted_transformer = fit_transform_one_cached(      
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^      
+  File "C:\Users\yesmi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\joblib\memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yesmi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\pipeline.py", line 1551, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yesmi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\feature_extraction\text.py", line 2104, in fit_transform
+    X = super().fit_transform(raw_documents)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yesmi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\base.py", line 1382, in wrapper
+    estimator._validate_params()
+  File "C:\Users\yesmi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\base.py", line 436, in _validate_params
+    validate_parameter_constraints(
+  File "C:\Users\yesmi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\utils\_param_validation.py", line 98, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'tokenizer' parameter of TfidfVectorizer must be a callable or None. Got LemmaTokenizer() instead.
+PS C:\Users\yesmi\Desktop\keylogger project> 
+2025-05-16 17:20:44 - Traceback (most recent call last):
+  File "c:\Users\yesmi\Desktop\keylogger project\nlp-model.py", line 406, in <module>
+    pipeline.fit(X_train, y_train)
+  File "C:\Users\yesmi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yesmi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\pipeline.py", line 654, in fit
+    Xt = self._fit(X, y, routed_params, raw_params=params)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yesmi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\pipeline.py", line 588, in _fit
+    X, fitted_transformer = fit_transform_one_cached(      
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^      
+  File "C:\Users\yesmi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\joblib\memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yesmi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\pipeline.py", line 1551, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yesmi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\feature_extraction\text.py", line 2104, in fit_transform
+    X = super().fit_transform(raw_documents)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yesmi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\base.py", line 1382, in wrapper
+    estimator._validate_params()
+  File "C:\Users\yesmi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\base.py", line 436, in _validate_params
+    validate_parameter_constraints(
+  File "C:\Users\yesmi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\utils\_param_validation.py", line 98, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'tokenizer' parameter of TfidfVectorizer must be a callable or None. Got LemmaTokenizer() instead.
+PS C:\Users\yesmi\Desktop\keylogger project> 
+2025-05-16 17:25:58 - ("cd /home/user", "normal"),
+    ("ls -l /var/www", "normal"),
+    ("mkdir new_folder", "normal"),
+    ("cp file.txt backup.txt", "normal"),
+    ("git status", "normal"),
+    ("sudo apt update", "normal"),
+    ("ping google.com", "normal"),
+    ("nano readme.md", "normal"),
+    ("top", "normal"),
+    ("df -h", "normal"),
+    ("cat /etc/hosts", "normal"),
+    ("ps aux", "normal"),
+    ("cd ..", "normal"),
+2025-05-16 17:32:55 - ("The server was hacked last night", "suspicious"),
+    ("They hacked into the database and stole information", "suspicious"),
+    ("My email got hacked by an attacker", "suspicious"),
+    ("Our system was hacked using a phishing attack", "suspicious"),
+    ("Hacked passwords are circulating online", "suspicious"),
+    ("I think someone hacked the firewall", "suspicious"),
+    ("The hacked account was used to send spam", "suspicious"),
+    ("Hacked credentials can lead to data breaches", "suspicious"),
+2025-05-16 17:33:08 - ("The server was hacked last night", "suspicious"),
+    ("They hacked into the database and stole information", "suspicious"),
+    ("My email got hacked by an attacker", "suspicious"),
+    ("Our system was hacked using a phishing attack", "suspicious"),
+    ("Hacked passwords are circulating online", "suspicious"),
+    ("I think someone hacked the firewall", "suspicious"),
+    ("The hacked account was used to send spam", "suspicious"),
+    ("Hacked credentials can lead to data breaches", "suspicious"),
+2025-05-16 17:33:12 - ("The server was hacked last night", "suspicious"),
+    ("They hacked into the database and stole information", "suspicious"),
+    ("My email got hacked by an attacker", "suspicious"),
+    ("Our system was hacked using a phishing attack", "suspicious"),
+    ("Hacked passwords are circulating online", "suspicious"),
+    ("I think someone hacked the firewall", "suspicious"),
+    ("The hacked account was used to send spam", "suspicious"),
+    ("Hacked credentials can lead to data breaches", "suspicious"),
+2025-05-16 17:33:22 - ("The server was hacked last night", "suspicious"),
+    ("They hacked into the database and stole information", "suspicious"),
+    ("My email got hacked by an attacker", "suspicious"),
+    ("Our system was hacked using a phishing attack", "suspicious"),
+    ("Hacked passwords are circulating online", "suspicious"),
+    ("I think someone hacked the firewall", "suspicious"),
+    ("The hacked account was used to send spam", "suspicious"),
+    ("Hacked credentials can lead to data breaches", "suspicious"),
+2025-05-17 16:14:37 - import os
+
+# Base directory of your project
+BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+
+# Shared log paths
+LOG_FILE = os.path.join(BASE_DIR, "logs", "logs.txt")
+ALERT_FILE = os.path.join(BASE_DIR, "logs", "alert_logs.txt"
+2025-05-17 16:44:42 - import os
+
+# Base project directory
+BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+
+# Shared file paths
+LOG_FILE = os.path.join(BASE_DIR, "logs", "logs.txt")
+ALERT_FILE = os.path.join(BASE_DIR, "logs", "alert_logs.txt")
+CLIPBOARD_LOG_FILE = os.path.join(BASE_DIR, "logs", "clipboard_logs.txt")
+
+# Screenshot directory
+SCREENSHOT_DIR = os.path.join(BASE_DIR, "screens")
+
+# Model file
+MODEL_FILE = os.path.join(BASE_DIR, "suspicious_classifier.pkl")
+
+2025-05-17 16:46:31 - http://127.0.0.1:5000 
+2025-05-17 18:01:24 - body {
+    margin: 0;
+    font-family: 'Urbanist', sans-serif;
+    background: #111418;
+    color: #E0E5EC;
+}
+
+/* Hero section reduced height & layout */
+.hero {
+    position: relative;
+    min-height: 200px; /* reduced height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px 60px; /* space for header + content */
+    color: #E0E5EC;
+}
+
+/* Mirror/glass effect header on top */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 96%;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(20, 20, 25, 0.3);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 10;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #E0E5EC;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 40px;
+}
+
+nav ul li a {
+    color: #E0E5EC;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #1fbfbf;
+}
+
+/* Hero content side by side layout */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    height: 80%;
+    max-width: 1600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+.hero-text {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-text h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.hero-text p {
+    font-size: 16px;
+    color: #1fbfbf;
+}
+
+main {
+    padding: 40px 20px;
+}
+
+.employee-logs {
+    background: #1A1D24;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.employee-logs h2 {
+    margin-top: 0;
+    color: #1fbfbf;
+    font-weight: 600;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #2C2F36;
+}
+
+th, td {
+    padding: 14px;
+    text-align: center;
+}
+
+th {
+    background-color: #2C2F36;
+    color: #1fbfbf;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #1F2228;
+}
+
+tr:hover {
+    background-color: rgba(0, 255, 255, 0.1);
+    transition: 0.3s;
+}
+
+/* View Details Button */
+.view-details-btn {
+    background-color: #1fbfbf;
+    color: #111418;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.view-details-btn:hover {
+    background-color: #16a0a0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 255, 255, 0.2);
+}
+
+/* Details Panel Styles */
+.details-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    margin-top: 0;
+    background: #1F2228;
+    border-radius: 0 0 8px 8px;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.details-panel.active {
+    max-height: 2000px; /* Large enough to show content */
+    margin-top: 20px;
+    transition: max-height 0.5s ease-in;
+}
+
+.panel-section {
+    padding: 20px;
+    border-bottom: 1px solid #2C2F36;
+}
+
+.panel-section h3 {
+    color: #1fbfbf;
+    margin-top: 0;
+    font-size: 18px;
+}
+
+/* Suspicious Text Entries Styles */
+.text-entries {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.text-entry {
+    background: rgba(20, 20, 25, 0.5);
+    padding: 12px;
+    border-radius: 6px;
+    border-left: 3px solid #1fbfbf;
+}
+
+.entry-time {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 6px;
+}
+
+.entry-content {
+    font-family: monospace;
+    word-break: break-all;
+}
+
+/* Screenshots Grid */
+.screenshots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.screenshot-item {
+    background: #111418;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.screenshot-item:hover {
+    transform: scale(1.03);
+}
+
+.screenshot-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.screenshot-time {
+    padding: 8px;
+    font-size: 12px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-text {
+        text-align: center;
+    }
+    
+    .hero-text h2 {
+        font-size: 36px;
+    }
+    
+    .screenshots-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+2025-05-17 18:02:03 - body {
+    margin: 0;
+    font-family: 'Urbanist', sans-serif;
+    background: #111418;
+    color: #E0E5EC;
+}
+
+/* Hero section reduced height & layout */
+.hero {
+    position: relative;
+    min-height: 200px; /* reduced height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px 60px; /* space for header + content */
+    color: #E0E5EC;
+}
+
+/* Mirror/glass effect header on top */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 96%;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(20, 20, 25, 0.3);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 10;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #E0E5EC;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 40px;
+}
+
+nav ul li a {
+    color: #E0E5EC;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #1fbfbf;
+}
+
+/* Hero content side by side layout */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    height: 80%;
+    max-width: 1600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+.hero-text {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-text h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.hero-text p {
+    font-size: 16px;
+    color: #1fbfbf;
+}
+
+main {
+    padding: 40px 20px;
+}
+
+.employee-logs {
+    background: #1A1D24;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.employee-logs h2 {
+    margin-top: 0;
+    color: #1fbfbf;
+    font-weight: 600;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #2C2F36;
+}
+
+th, td {
+    padding: 14px;
+    text-align: center;
+}
+
+th {
+    background-color: #2C2F36;
+    color: #1fbfbf;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #1F2228;
+}
+
+tr:hover {
+    background-color: rgba(0, 255, 255, 0.1);
+    transition: 0.3s;
+}
+
+/* View Details Button */
+.view-details-btn {
+    background-color: #1fbfbf;
+    color: #111418;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.view-details-btn:hover {
+    background-color: #16a0a0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 255, 255, 0.2);
+}
+
+/* Details Panel Styles */
+.details-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    margin-top: 0;
+    background: #1F2228;
+    border-radius: 0 0 8px 8px;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.details-panel.active {
+    max-height: 2000px; /* Large enough to show content */
+    margin-top: 20px;
+    transition: max-height 0.5s ease-in;
+}
+
+.panel-section {
+    padding: 20px;
+    border-bottom: 1px solid #2C2F36;
+}
+
+.panel-section h3 {
+    color: #1fbfbf;
+    margin-top: 0;
+    font-size: 18px;
+}
+
+/* Suspicious Text Entries Styles */
+.text-entries {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.text-entry {
+    background: rgba(20, 20, 25, 0.5);
+    padding: 12px;
+    border-radius: 6px;
+    border-left: 3px solid #1fbfbf;
+}
+
+.entry-time {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 6px;
+}
+
+.entry-content {
+    font-family: monospace;
+    word-break: break-all;
+}
+
+/* Screenshots Grid */
+.screenshots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.screenshot-item {
+    background: #111418;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.screenshot-item:hover {
+    transform: scale(1.03);
+}
+
+.screenshot-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.screenshot-time {
+    padding: 8px;
+    font-size: 12px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-text {
+        text-align: center;
+    }
+    
+    .hero-text h2 {
+        font-size: 36px;
+    }
+    
+    .screenshots-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+2025-05-17 18:02:30 - d
+2025-05-17 18:05:11 - n
+2025-05-17 18:07:26 - http://127.0.0.1:5000
+2025-05-17 18:18:44 - "
+2025-05-17 18:23:35 - )
+2025-05-17 18:25:33 - )
+2025-05-17 18:26:21 - )
+2025-05-17 18:27:04 - )
+2025-05-17 18:36:01 - f.write(f"[ALERT] {datetime.now()} → {activity}\n")
+
+2025-05-17 18:44:18 - screenshot_path = os.path.join(screens_dir, f"screenshot_{timestamp}.png")
+2025-05-18 22:06:53 - http://127.0.0.1:5000
+2025-05-18 22:12:43 -     (" http://excel.com", "normal"),
+
+2025-05-18 22:26:07 - SCREENSHOT_DIR = os.path.join(BASE_DIR, 'static', 'screens')  # ✅ correct
+
+2025-05-18 22:29:14 - (" http://behance.com", "normal"),
+    (" http://excel.com", "normal"),
+    (" http://microsoft.com", "normal"),
+    (" http://chatgpt.com", "normal"),
+    (" http://122.3665.001.com", "normal"),
+2025-05-18 22:30:46 - (" http://behance.com", "normal"),
+    (" http://excel.com", "normal"),
+    (" http://microsoft.com", "normal"),
+    (" http://chatgpt.com", "normal"),
+    (" http://122.3665.001.com", "normal"),
+2025-05-18 22:50:02 - (" http://behance.com", "normal"),
+    (" http://excel.com", "normal"),
+    (" http://microsoft.com", "normal"),
+    (" http://chatgpt.com", "normal"),
+    (" http://122.3665.001.com", "normal"),
+2025-05-18 22:50:33 - (" http://behance.com", "normal"),
+    (" http://excel.com", "normal"),
+    (" http://microsoft.com", "normal"),
+    (" http://chatgpt.com", "normal"),
+    (" http://122.3665.001.com", "normal"),
+2025-05-18 22:52:32 - (" http://behance.com", "normal"),
+    (" http://excel.com", "normal"),
+    (" http://microsoft.com", "normal"),
+    (" http://chatgpt.com", "normal"),
+    (" http://122.3665.001.com", "normal"),
+2025-05-18 23:00:52 - )
+2025-05-18 23:02:19 - )

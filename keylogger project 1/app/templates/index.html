@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Keylogger Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <section class="hero">
+        <header>
+            <h1>Keylogger Control Panel</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2>Monitor & Analyze Employee Activity</h2>
+                <p>Real-time keylogging stats and security alerts at your fingertips.</p>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <div class="employee-logs">
+            <h2>Keylogger Suspicious Activity Dashboard</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Employee Name</th>
+                        <th>Suspicious Activity Detected</th>
+                        <th>Last Active</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for employee in employees %}
+                    <tr>
+                        <td>{{ employee.name }}</td>
+                        <td>{{ employee.suspicious }}</td>
+                        <td>{{ employee.last_active }}</td>
+                        <td>
+                            <button class="view-details-btn" onclick="toggleDetails()">View Details</button>
+                        </td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="4" style="text-align: center;">No suspicious activity found.</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <div id="details-panel" class="details-panel">
+                <div class="panel-section">
+                    <h3>Suspicious Text Entries</h3>
+                    <div class="text-entries">
+                        {% if suspicious_texts %}
+                            {% for text in suspicious_texts %}
+                            <div class="text-entry">
+                                <div class="entry-time">{{ text.timestamp }}</div>
+                                <div class="entry-content">{{ text.text }}</div>
+                            </div>
+                            {% endfor %}
+                        {% else %}
+                            <p>No suspicious text entries found.</p>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <h3>Screenshots</h3>
+                    <div class="screenshots-grid">
+                        {% if screenshots %}
+                            {% for screenshot in screenshots %}
+                            <div class="screenshot-item">
+                                <img src="{{ url_for('static', filename='screens/' + screenshot.path) }}" alt="Screenshot {{ screenshot.timestamp }}">
+                                <div class="screenshot-time">{{ screenshot.timestamp }}</div>
+                            </div>
+                            {% endfor %}
+                        {% else %}
+                            <p>No screenshots found.</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function toggleDetails() {
+            const detailsPanel = document.getElementById('details-panel');
+            detailsPanel.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
