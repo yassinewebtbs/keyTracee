@@ -20,7 +20,7 @@ current_sentence = []
 last_checked_text = ""
 buffer_timeout = 0  # Timer to check sentence
 
-# Fix for Unicode issue 
+
 def safe_check_sentence(text):
     """Wrapper around check_sentence to handle Unicode errors"""
     try:
